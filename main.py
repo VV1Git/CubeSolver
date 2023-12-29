@@ -7,3 +7,4 @@ camera.capture('image0.jpg')
 camera.iso = 800
 camera.capture('image1.jpg')
 print(camera.iso)
+camera.close()
