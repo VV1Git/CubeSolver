@@ -9,6 +9,7 @@ camera.exposure_mode = 'off'
 g = camera.awb_gains
 camera.awb_mode = 'off'
 camera.awb_gains = g"""
+camera.led = False
 camera.resolution = (1024, 768)
 camera.exposure_mode = 'auto'
 camera.awb_mode = 'auto'
