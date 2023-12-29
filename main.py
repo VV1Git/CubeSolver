@@ -1,3 +1,3 @@
-import math
+import numpy as np
 print("Hello World!")
-print(math.sqrt(4))
+print(np.__version__)
