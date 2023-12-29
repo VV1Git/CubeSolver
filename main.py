@@ -3,3 +3,4 @@ from picamera import PiCamera
 print("started")
 camera = PiCamera()
 camera.capture('image.jpg')
+print(camera.ISO)
