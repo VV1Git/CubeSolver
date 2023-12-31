@@ -26,7 +26,6 @@ camera.close()"""
 
  
 bluePins = [26, 19, 13, 6]
-greenPins = [5, 10, 9, 11]
 
 blue = RpiMotorLib.BYJMotor("Blue", "Nema")
 time.sleep(0.5)
@@ -37,4 +36,3 @@ time.sleep(0.5)
 # Red -> Out4
 # Blue -> Out2
 blue.motor_run(bluePins, 0.001, 50, False, False, "half", .05)
-
