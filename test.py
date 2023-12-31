@@ -35,4 +35,4 @@ time.sleep(0.5)
 # Green -> Out1
 # Red -> Out4
 # Blue -> Out2
-blue.motor_run(bluePins, 0.001, 50, False, False, "half", .05)
+blue.motor_run(bluePins, 0.01, 5000, False, False, "full", .05)
