@@ -26,12 +26,12 @@ camera.close()"""
 
  
 bluePins = [26, 19, 13, 6]
-greenPins = [5, 10, 9, 11]
+greenPins = [5, 11, 9, 10]
 
 blue = RpiMotorLib.BYJMotor("Blue", "Nema")
 green = RpiMotorLib.BYJMotor("Green", "Nema")
 time.sleep(0.5)
 
 # GPIO Pins, wait, steps, counterclockwise, verbose, steptype ("full, half, wave"), initdelay - 50 steps per rotation
-blue.motor_run(bluePins, 0.001, 25, False, False, "full", .05)
-green.motor_run(greenPins, 0.001, 50, False, False, "half", .05)
+blue.motor_run(bluePins, 0.001, 100, False, False, "half", .05)
+green.motor_run(greenPins, 0.001, 100, False, False, "half", .05)
