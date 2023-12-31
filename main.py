@@ -27,6 +27,12 @@ out1 = 26
 out2 = 19
 out3 = 13
 out4 = 6
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(out1,GPIO.OUT)
+GPIO.setup(out2,GPIO.OUT)
+GPIO.setup(out3,GPIO.OUT)
+GPIO.setup(out4,GPIO.OUT)
  
 # careful lowering this, at some point you run into the mechanical limitation of how quick your motor can move
 try:
