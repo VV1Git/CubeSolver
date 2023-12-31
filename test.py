@@ -30,8 +30,9 @@ bluePins = [26, 19, 13, 6]
 blue = RpiMotorLib.BYJMotor("Blue", "Nema")
 time.sleep(0.5)
 
-# GPIO Pins, wait, steps, counterclockwise, verbose, steptype ("full, half, wave"), initdelay - 50 steps per rotation
+# GPIO Pins, wait, steps, counterclockwise, verbose, steptype ("full, half, wave"), initdelay - 50 steps per rotation on half
+# Black -> Out3
+# Green -> Out1
+# Red -> Out4
+# Blue -> Out2
 blue.motor_run(bluePins, 0.001, 50, False, False, "half", .05)
-blue.motor_run(bluePins, 0.001, 50//4, True, False, "half", .05)
-blue.motor_run(bluePins, 0.001, 50//2, False, False, "half", .05)
-blue.motor_run(bluePins, 0.001, 50//4, True, False, "half", .05)
