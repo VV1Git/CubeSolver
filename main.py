@@ -25,13 +25,31 @@ camera.capture('image1.jpg')
 camera.close()"""
 
  
-bluePins = [26, 19, 13, 6]
-greenPins = [5, 11, 9, 10]
+yellowPins = [26, 19, 13, 6]
+redPins = [5, 11, 9, 10]
+greenPins = [22, 27, 17, 4]
 
-blue = RpiMotorLib.BYJMotor("Blue", "Nema")
+yellow = RpiMotorLib.BYJMotor("Yello", "Nema")
+red = RpiMotorLib.BYJMotor("Red", "Nema")
 green = RpiMotorLib.BYJMotor("Green", "Nema")
 time.sleep(0.5)
 
+steptype = "full"
+initdelay = .05
+
+
 # GPIO Pins, wait, steps, counterclockwise, verbose, steptype ("full, half, wave"), initdelay - 50 steps per rotation
-blue.motor_run(bluePins, 0.001, 100, False, False, "half", .05)
-green.motor_run(greenPins, 0.001, 100, False, False, "half", .05)
+for i in range(3):
+    green.motor_run(greenPins, 0.001, 50//4, False, False, steptype, initdelay)
+    yellow.motor_run(yellowPins, 0.001, 50//4, False, False, steptype, initdelay)
+    green.motor_run(greenPins, 0.001, 50//4, True, False, steptype, initdelay)
+    red.motor_run(redPins, 0.001, 50//4, True, False, steptype, initdelay)
+    green.motor_run(greenPins, 0.001, 50//4, False, False, steptype, initdelay)
+    yellow.motor_run(yellowPins, 0.001, 50//4, False, False, steptype, initdelay)
+    green.motor_run(greenPins, 0.001, 50//4, True, False, steptype, initdelay)
+    yellow.motor_run(yellowPins, 0.001, 50//4, True, False, steptype, initdelay)
+    green.motor_run(greenPins, 0.001, 50//4, True, False, steptype, initdelay)
+    red.motor_run(redPins, 0.001, 50//4, False, False, steptype, initdelay)
+    green.motor_run(greenPins, 0.001, 25, False, False, steptype, initdelay)
+    yellow.motor_run(yellowPins, 0.001, 50//4, True, False, steptype, initdelay)
+    green.motor_run(greenPins, 0.001, 50//4, True, False, steptype, initdelay)
